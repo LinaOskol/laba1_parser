@@ -10,10 +10,10 @@ allFaculties = []
 file = open('result.txt', 'w')
 soup = BeautifulSoup(page.text, "html.parser")
 # print(soup)
-allFaculties = soup.find_all('div', class_='main__content')
+allFaculties = soup.find_all('div', id='pagecontent')
 for facult in allFaculties:
-    if facult.find('li') is not None:
-        faculties.append(facult.text)
+    #if facult.find('ul') is not None:
+        faculties.append(facult.find('ul').text)
 for facult in faculties:
     file.write(facult)
 
