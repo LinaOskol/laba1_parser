@@ -12,8 +12,8 @@ soup = BeautifulSoup(page.text, "html.parser")
 
 allFaculties = soup.find_all('div', id='pagecontent')
 for facult in allFaculties:
+    faculties.append(facult.find('ul').text)
     
-        faculties.append(facult.find('ul').text)
 for facult in faculties:
     file.write(facult)
 
