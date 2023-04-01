@@ -1,2 +1,3 @@
-# laba1_parser
-Study project
+# parser
+### study project
+### parser for Omstu faculties
