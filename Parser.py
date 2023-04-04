@@ -15,8 +15,7 @@ def parse():
     for facult in allFaculties:
         faculties.append(facult.find('ul').text)  # ищем теги ul и вносим в массив
 
-    faculties = faculties[0][0:len(faculties[0]) - 3].split(
-        '\n')  # разделяем по \n нулевой элемент,чтобы получить массив
+    faculties = faculties[0][0:len(faculties[0]) - 3].split('\n')  # разделяем по \n нулевой элемент,чтобы получить массив
 
     for facult in faculties:
         if facult != '':
